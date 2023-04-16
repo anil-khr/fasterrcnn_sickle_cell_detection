@@ -1,0 +1,1 @@
+from faster_rcnn_od.entity.config_entity import (DataIngestionConfig)

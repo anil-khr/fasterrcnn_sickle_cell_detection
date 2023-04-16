@@ -1,0 +1,1 @@
+from faster_rcnn_od.components.data_ingestion import DataIngestion

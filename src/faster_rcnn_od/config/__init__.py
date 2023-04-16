@@ -1,0 +1,1 @@
+from faster_rcnn_od.config.configuration import ConfigurationManager

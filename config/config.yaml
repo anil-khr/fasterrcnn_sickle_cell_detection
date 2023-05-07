@@ -12,3 +12,17 @@ prepare_base_model:
   root_dir: artifacts/prepare_base_model
   base_model_path: artifacts/prepare_base_model/base_model.pt
   updated_base_model_path: artifacts/prepare_base_model/base_model_updated.pt
+
+
+data_transformation:
+ root_dir: artifacts/transformed_data
+ local_data_file: artifacts\data_ingestion\SIckle_for_rcnn\out.csv
+ transformed_data_file: artifacts/transformed_data
+
+train_faster_rcnn:
+ root_dir: artifacts/trained_output_facts
+ model_loader_path: artifacts/prepare_base_model/base_model.pt
+ train_loader_path: artifacts\transformed_data
+ valid_loader_path: artifacts\transformed_data\val_loader.pt
+ outputs: artifacts/trained_output_facts
+ 

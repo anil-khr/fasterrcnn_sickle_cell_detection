@@ -15,7 +15,9 @@
 ##
 
 How to run?
+
 STEPS:
+
 Clone the repository
 
 https://github.com/anil-khr/fasterrcnn_sickle_cell_detection.git
@@ -33,3 +35,21 @@ pip install -r requirements.txt
 # Finally run the following command
 
 python app.py
+
+
+
+
+
+The params.yaml file contains the following information:
+
+The batch size to use for training. If you carry out training on your own system, then you may increase or decrease the size according to your available GPU memory.
+
+The dimensions that we want the images to resize to, that is RESIZE_TO.
+
+Number of epochs to train for. The models included in the zip file for download are trained for 10 epochs as well.
+
+Number of workers or sub-processes to use for data loading. This helps a lot when we have a large dataset or reading images form disk, or even doing a lot of image augmentations as well.
+
+The computation device to use for training. For training, you will need a GPU. A CPU is just too slow for Faster RCNN training and object detection training in general as well.
+
+Then we have the classes and the number of classes. Note that we have a __background__ class at the beginning. This is required while fine-tuning PyTorch object detection models. The class at index 0 is always the __background__ class.
